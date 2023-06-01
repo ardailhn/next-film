@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 
 import '@/styles/reset.css';
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   robots: {
     googleBot: 'index,follow',
   },
-  
+
 }
 
 export default function RootLayout({
@@ -34,6 +35,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
